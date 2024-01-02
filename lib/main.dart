@@ -1,4 +1,6 @@
 import 'package:book_store/homepage.dart';
+import 'package:book_store/splash.dart';
+import 'package:book_store/temporal.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +19,12 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      routes: {
+        '/homepage': (context) => const HomePage(),
+        '/temporal': (context) => const Temporal(),
+        '/splash': (context) => const Splash(),
+      },
+      initialRoute: '/splash',
     );
   }
 }
